@@ -1,0 +1,85 @@
+/* 
+FlexBox template
+*/
+
+/* custom properties, variables */
+:root{
+ --primary-color: violet;
+ --secondary-color:orange;
+ --tertiary-color:hotpink;
+ --quartenary-color:olivedrab;
+ --media-xl: 1200px;
+}
+
+/* Layout */
+  body {
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: column; /* affichage vertical */
+    min-height: 100vh; /* toute la hauteur du viewport */
+  }
+  .wrapper {
+    flex: 1 1 auto; /* occupe la hauteur restante */
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: row; /* affichage horizontal */
+  }
+  nav {
+    width: 15em; /*16px*/
+  }
+  .content {
+    flex: 1; /* occupe la largeur restante */
+  }
+
+
+/* Responsive */
+@media (max-width: 640px) {
+	body {
+  min-height: 0; 
+  }
+	.wrapper {
+    flex-direction: column;
+  }
+	.content {
+		flex-basis: auto;
+	}
+  nav {
+    width: auto;
+    order: 1;
+  }
+}
+
+/* Decoration */
+
+body {
+	margin: 0;
+	background: #fff;
+	font-family: "Century Gothic", helvetica, arial, sans-serif;
+	font-size: 1.1em;
+}
+header, nav, section, footer {
+	padding: 10px;
+	margin: 0;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+}
+header {
+	background-color: var( --primary-color );
+  text-align: center;
+}
+nav {
+	background: var(--secondary-color);
+}
+nav a {
+  display: block;
+  padding: .5em 1em;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+}
+section {
+	background: var(--tertiary-color);
+}
+footer {
+	background: var(--quartenary-color);
+  text-align: center;
+}
