@@ -9,6 +9,7 @@ FlexBox template
  --tertiary-color:hotpink;
  --quartenary-color:olivedrab;
  --media-xl: 1200px;
+ --border-radius: 5px;
 }
 
 /* Layout */
@@ -21,6 +22,7 @@ FlexBox template
     flex: 1 1 auto; /* occupe la hauteur restante */
     display: flex; /* crée un contexte flex pour ses enfants */
     flex-direction: row; /* affichage horizontal */
+    border-radius: var(--border-radius);
   }
   nav {
     width: 15em; /*16px*/
@@ -83,3 +85,9 @@ footer {
 	background: var(--quartenary-color);
   text-align: center;
 }
+
+
+MOBIL FIRST 
+  — definir les fonctionnalités qui seront presente en Smartphone
+  — design mobil
+  — 
